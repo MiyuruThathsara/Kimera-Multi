@@ -62,6 +62,8 @@ glxinfo | grep "OpenGL version"       # verify version
 # else: use following commands to make symbolic links to create .so files
 sudo ln -sf /usr/lib/x86_64-linux-gnu/libGL.so.1.7.0 /usr/lib/x86_64-linux-gnu/libGL.so       # use newest libGL.so.1.x 
 sudo ln -sf /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0 /usr/lib/x86_64-linux-gnu/libEGL.so     # use newest libEGL.so.1.x
+# Make sure OpenCL is installed else use following command to install,
+sudo apt-get install opencl-headers ocl-icd-opencl-dev
 
 catkin build --continue -s
 ```
