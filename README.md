@@ -50,6 +50,12 @@ catkin config -a --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DGTSAM_TANGENT_
 # Following ros dependencies are required for image_undistort to build
 sudo apt-get install libpcl-dev ros-${ROS_DISTRO}-pcl-ros
 sudo apt-get install ros-${ROS_DISTRO}-tf-conversions
+# Following ros dependencies are required for mesh_rviz_plugins to build
+sudo apt-get install ros-${ROS_DISTRO}-image-geometry
+# Following ros dependencies are required for minkindr_conversions to build
+sudo apt-get install ros-${ROS_DISTRO}-eigen-conversions
+# Following ros dependencies are required for rviz_mesh_plugins and kimera_rviz_markers to build
+sudo apt-get install ros-${ROS_DISTRO}-rviz
 
 catkin build --continue -s
 ```
