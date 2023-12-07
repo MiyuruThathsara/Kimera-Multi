@@ -39,11 +39,18 @@ sudo bash kimera_multi/install/dependencies.sh
 
 # For full install
 vcs import . --input kimera_multi/kimera_multi.repos --recursive
+# --------------Miyuru----------------
 # if above does not work can try with adding "-w 1" argument, which removes parallel execution  
 
 cd ..
 # Configure build options and build!
 catkin config -a --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo -DGTSAM_TANGENT_PREINTEGRATION=OFF -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF -DOPENGV_BUILD_WITH_MARCH_NATIVE=OFF
+
+# --------------Miyuru----------------
+# Following ros dependencies are required for image_undistort to build
+sudo apt-get install libpcl-dev ros-${ROS_DISTRO}-pcl-ros
+sudo apt-get install ros-${ROS_DISTRO}-tf-conversions
+
 catkin build --continue -s
 ```
 
