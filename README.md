@@ -65,6 +65,10 @@ sudo ln -sf /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0 /usr/lib/x86_64-linux-gnu/
 # Make sure OpenCL is installed else use following command to install,
 sudo apt-get install opencl-headers ocl-icd-opencl-dev
 # Make sure opencv3_catkin CMakeLists.txt file is added with -DWITH_FFMPEG=OFF
+# Following ros dependencies are required for kimera_semantics to build
+sudo apt-get install ros-noetic-depth-image-proc
+# Make sure you have installed OpenGV. You can install OpenGV from source code https://github.com/laurentkneip/opengv. You can follow "https://laurentkneip.github.io/opengv/page_installation.html" this guide to built OpenGV. Remember to "sudo make install"  
+
 
 catkin build --continue -s
 ```
