@@ -64,6 +64,7 @@ sudo ln -sf /usr/lib/x86_64-linux-gnu/libGL.so.1.7.0 /usr/lib/x86_64-linux-gnu/l
 sudo ln -sf /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0 /usr/lib/x86_64-linux-gnu/libEGL.so     # use newest libEGL.so.1.x
 # Make sure OpenCL is installed else use following command to install,
 sudo apt-get install opencl-headers ocl-icd-opencl-dev
+# Make sure opencv3_catkin CMakeLists.txt file is added with -DWITH_FFMPEG=OFF
 
 catkin build --continue -s
 ```
