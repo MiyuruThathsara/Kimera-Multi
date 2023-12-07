@@ -39,6 +39,7 @@ sudo bash kimera_multi/install/dependencies.sh
 
 # For full install
 vcs import . --input kimera_multi/kimera_multi.repos --recursive
+# if above does not work can try with adding "-w 1" argument, which removes parallel execution  
 
 cd ..
 # Configure build options and build!
