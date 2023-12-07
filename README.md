@@ -56,6 +56,12 @@ sudo apt-get install ros-${ROS_DISTRO}-image-geometry
 sudo apt-get install ros-${ROS_DISTRO}-eigen-conversions
 # Following ros dependencies are required for rviz_mesh_plugins and kimera_rviz_markers to build
 sudo apt-get install ros-${ROS_DISTRO}-rviz
+# Make sure /usr/lib/x86_64-linux-gnu/libEGL.so and /usr/lib/x86_64-linux-gnu/libGL.so present. If they don't exists, try installing OpenGL using following
+sudo apt-get install libgl1-mesa-dev
+glxinfo | grep "OpenGL version"       # verify version
+# else: use following commands to make symbolic links to create .so files
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libGL.so.1.7.0 /usr/lib/x86_64-linux-gnu/libGL.so       # use newest libGL.so.1.x 
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0 /usr/lib/x86_64-linux-gnu/libEGL.so     # use newest libEGL.so.1.x
 
 catkin build --continue -s
 ```
