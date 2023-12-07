@@ -67,8 +67,13 @@ sudo apt-get install opencl-headers ocl-icd-opencl-dev
 # Make sure opencv3_catkin CMakeLists.txt file is added with -DWITH_FFMPEG=OFF
 # Following ros dependencies are required for kimera_semantics to build
 sudo apt-get install ros-noetic-depth-image-proc
-# Make sure you have installed OpenGV. You can install OpenGV from source code https://github.com/laurentkneip/opengv. You can follow "https://laurentkneip.github.io/opengv/page_installation.html" this guide to built OpenGV. Remember to "sudo make install"  
-
+# Make sure you have installed OpenGV. You can install OpenGV from source code https://github.com/laurentkneip/opengv.
+# You can follow "https://laurentkneip.github.io/opengv/page_installation.html" this guide to built OpenGV.
+# Remember to "sudo make install"
+# You should have installed Pangolin in your machine which you should clone from,
+git clone git@github.com:stevenlovegrove/Pangolin.git
+cd Pangolin
+git checkout v0.6
 
 catkin build --continue -s
 ```
